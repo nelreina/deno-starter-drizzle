@@ -1,0 +1,1 @@
+ALTER TABLE "event_logs" ALTER COLUMN "timestamp" SET NOT NULL;
