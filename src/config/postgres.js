@@ -1,3 +1,4 @@
+import "https://deno.land/x/logging@v2.0.0/mod.ts";
 import postgres from "npm:postgres";
 
 const DB_USER = Deno.env.get("DB_USER") || "postgres";
@@ -18,13 +19,12 @@ class Postgres {
   }
   connect() {
     //  await this.client.connect();
-    console.log("Connected to the database");
+    console.info("Connected to the database");
   }
   // close the connection
   async close() {
     return await this.client.end();
   }
-
 }
 
 export default Postgres;

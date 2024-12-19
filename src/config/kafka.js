@@ -1,3 +1,5 @@
+import "https://deno.land/x/logging@v2.0.0/mod.ts";
+
 import { Kafka } from "npm:kafkajs";
 import "jsr:@std/dotenv/load";
 

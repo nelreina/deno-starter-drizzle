@@ -39,6 +39,7 @@
     "jsr:@std/bytes@1": "1.0.3",
     "jsr:@std/bytes@^1.0.2": "1.0.3",
     "jsr:@std/crypto@1": "1.0.3",
+    "jsr:@std/dotenv@*": "0.225.3",
     "jsr:@std/encoding@1": "1.0.5",
     "jsr:@std/encoding@1.0": "1.0.5",
     "jsr:@std/encoding@^1.0.5": "1.0.5",
@@ -66,6 +67,7 @@
     "npm:filesize@~10.1.1": "10.1.6",
     "npm:hono@*": "4.6.7",
     "npm:json5@~2.2.3": "2.2.3",
+    "npm:kafkajs@*": "2.2.4",
     "npm:mailtrap@*": "3.4.0",
     "npm:node-schedule@*": "2.1.1",
     "npm:path-to-regexp@6.2.1": "6.2.1",
@@ -290,6 +292,9 @@
     },
     "@std/crypto@1.0.3": {
       "integrity": "a2a32f51ddef632d299e3879cd027c630dcd4d1d9a5285d6e6788072f4e51e7f"
+    },
+    "@std/dotenv@0.225.3": {
+      "integrity": "a95e5b812c27b0854c52acbae215856d9cce9d4bbf774d938c51d212711e8d4a"
     },
     "@std/encoding@0.224.3": {
       "integrity": "5e861b6d81be5359fad4155e591acf17c0207b595112d1840998bb9f476dbdaf"
@@ -1137,6 +1142,9 @@
         "graceful-fs",
         "universalify"
       ]
+    },
+    "kafkajs@2.2.4": {
+      "integrity": "sha512-j/YeapB1vfPT2iOIUn/vxdyKEuhuY2PxMBvf5JWux6iSaukAccrMtXEY/Lb7OvavDhOWME589bpLrEdnVHjfjA=="
     },
     "lazy@1.0.11": {
       "integrity": "sha512-Y+CjUfLmIpoUCCRl0ub4smrYtGGr5AOa2AKOaWelGHOGz33X/Y/KizefGqbkwfz44+cnq/+9habclf8vOmu2LA=="

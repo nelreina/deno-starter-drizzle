@@ -10,7 +10,7 @@ const SERVICE_NAME = Deno.env.get("SERVICE_NAME") || "no-name-provided";
 const STREAM = Deno.env.get("STREAM") || "tmp:stream";
 Deno.addSignalListener("SIGTERM", () => {
   db.close();
-  console.log("Shutting Down The app!");
+  console.info("Shutting Down The app!");
   Deno.exit();
 });
 
@@ -23,8 +23,7 @@ try {
   connectToEventStream(STREAM, eventHanlder);
 
   Deno.serve({ port: PORT }, app.fetch);
-  console.log(`🚀 ${SERVICE_NAME} is running on http://localhost:${PORT}`);
-
+  console.info(`🚀 ${SERVICE_NAME} is running on http://localhost:${PORT}`);
 } catch (error) {
   console.error("❗️ Error: ", error.message);
 }
