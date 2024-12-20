@@ -57,6 +57,7 @@
     "jsr:@std/semver@^1.0.3": "1.0.3",
     "npm:@drizzle-team/brocli@~0.10.1": "0.10.2",
     "npm:@nelreina/redis-stream-consumer@*": "2.1.6",
+    "npm:@nelreina/redis-stream-consumer@^2.1.6": "2.1.6",
     "npm:@types/node@*": "22.5.4",
     "npm:cbor-x@^1.5.9": "1.6.0",
     "npm:chalk@*": "3.0.0",
@@ -75,6 +76,7 @@
     "npm:postgres@*": "3.4.4",
     "npm:postgres@^3.4.4": "3.4.4",
     "npm:redis@*": "4.7.0_@redis+client@1.6.0",
+    "npm:redis@^4.7.0": "4.7.0_@redis+client@1.6.0",
     "npm:timeago.js@~4.0.2": "4.0.2",
     "npm:ws@^8.17.0": "8.18.0",
     "npm:zod@~3.23.6": "3.23.8"
@@ -1584,9 +1586,11 @@
       "jsr:@hono/hono@4",
       "jsr:@std/assert@1",
       "npm:@drizzle-team/brocli@~0.10.1",
+      "npm:@nelreina/redis-stream-consumer@^2.1.6",
       "npm:drizzle-kit@~0.26.2",
       "npm:drizzle-orm@~0.35.2",
-      "npm:postgres@^3.4.4"
+      "npm:postgres@^3.4.4",
+      "npm:redis@^4.7.0"
     ]
   }
 }

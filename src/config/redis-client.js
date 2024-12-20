@@ -1,7 +1,7 @@
 import "https://deno.land/x/logging@v2.0.0/mod.ts";
 
-import { createClient } from "npm:redis";
-import { newEventStreamService as EventStream } from "npm:@nelreina/redis-stream-consumer";
+import { createClient } from "redis";
+import { newEventStreamService as EventStream } from "@nelreina/redis-stream-consumer";
 
 let url;
 const REDIS_HOST = Deno.env.get("REDIS_HOST");

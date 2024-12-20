@@ -1,5 +1,5 @@
 import "https://deno.land/x/logging@v2.0.0/mod.ts";
-import postgres from "npm:postgres";
+import postgres from "postgres";
 
 const DB_USER = Deno.env.get("DB_USER") || "postgres";
 const DB_HOST = Deno.env.get("DB_HOST") || "localhost";
