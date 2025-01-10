@@ -1,18 +1,21 @@
 import "https://deno.land/x/logging@v2.0.0/mod.ts";
 import { Hono } from "hono";
 import { logger } from "hono/logger";
-import { db } from "./config/postgres.js";
 import eventHanlder from "./lib/event-handler.js";
 import { connectToEventStream } from "./config/redis-client.js";
 
 const PORT = Deno.env.get("SERVICE_PORT") || 8000;
 const SERVICE_NAME = Deno.env.get("SERVICE_NAME") || "no-name-provided";
 const STREAM = Deno.env.get("STREAM") || "tmp:stream";
-Deno.addSignalListener("SIGTERM", () => {
-  db.close();
+
+const shutdown = () => {
   console.info("Shutting Down The app!");
   Deno.exit();
-});
+};
+
+Deno.addSignalListener("SIGINT", shutdown);
+Deno.addSignalListener("SIGTERM", shutdown);
+
 
 try {
   const app = new Hono();
