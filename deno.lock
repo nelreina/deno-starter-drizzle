@@ -22,6 +22,8 @@
     "jsr:@cross/utils@0.9": "0.9.4",
     "jsr:@hexagon/croner@8.1": "8.1.2",
     "jsr:@hono/hono@4": "4.6.13",
+    "jsr:@nelreina/redis-client@~0.1.9": "0.1.9",
+    "jsr:@nelreina/redis-stream-event@~0.2.6": "0.2.6",
     "jsr:@oak/commons@1": "1.0.0",
     "jsr:@oak/oak@17": "17.1.3",
     "jsr:@pup/api-client@2.0": "2.0.0",
@@ -56,8 +58,6 @@
     "jsr:@std/path@~1.0.1": "1.0.8",
     "jsr:@std/semver@^1.0.3": "1.0.3",
     "npm:@drizzle-team/brocli@~0.10.1": "0.10.2",
-    "npm:@nelreina/redis-stream-consumer@*": "2.1.6",
-    "npm:@nelreina/redis-stream-consumer@^2.1.6": "2.1.6",
     "npm:@types/node@*": "22.5.4",
     "npm:cbor-x@^1.5.9": "1.6.0",
     "npm:chalk@*": "3.0.0",
@@ -75,7 +75,6 @@
     "npm:pm2@*": "5.4.2",
     "npm:postgres@*": "3.4.4",
     "npm:postgres@^3.4.4": "3.4.4",
-    "npm:redis@*": "4.7.0_@redis+client@1.6.0",
     "npm:redis@^4.7.0": "4.7.0_@redis+client@1.6.0",
     "npm:timeago.js@~4.0.2": "4.0.2",
     "npm:ws@^8.17.0": "8.18.0",
@@ -195,6 +194,16 @@
     },
     "@hono/hono@4.6.13": {
       "integrity": "198970fc6facf71a88ee57aa1ed32143b56bcb0f842fa965ca3ee7d6fdd21a8e"
+    },
+    "@nelreina/redis-client@0.1.9": {
+      "integrity": "dda96bfa25454430c8a47fb0a71f97e399021711444ca3fa13ca70e5a5a6d271",
+      "dependencies": [
+        "jsr:@nelreina/redis-stream-event",
+        "npm:redis"
+      ]
+    },
+    "@nelreina/redis-stream-event@0.2.6": {
+      "integrity": "0927597cd514b123f898ff80906c8fdd2e0e3abee2ba62fb10e9be338d4228c4"
     },
     "@oak/commons@1.0.0": {
       "integrity": "49805b55603c3627a9d6235c0655aa2b6222d3036b3a13ff0380c16368f607ac",
@@ -544,13 +553,6 @@
     },
     "@libsql/libsql-wasm-experimental@0.0.2": {
       "integrity": "sha512-xkiu88QwozGr3KEt9h0zeHLYUIWkeDchXmuOUW4/Wh/mRZkDlNtIIePAR0FiLl1j0o4OyTEOtPnvmaXQ5MNTKQ=="
-    },
-    "@nelreina/redis-stream-consumer@2.1.6": {
-      "integrity": "sha512-bgKv03dDrjMZVyLthS9TIOjCW6wysjSRB8w1JH2ZKPOl3iJtr94rptRT+w8STJCgLW+nB/AyU9WJ1Hrg5tsJLA==",
-      "dependencies": [
-        "dayjs@1.11.13",
-        "redis"
-      ]
     },
     "@pm2/agent@2.0.4": {
       "integrity": "sha512-n7WYvvTJhHLS2oBb1PjOtgLpMhgImOq8sXkPBw6smeg9LJBWZjiEgPKOpR8mn9UJZsB5P3W4V/MyvNnp31LKeA==",
@@ -1584,13 +1586,11 @@
   "workspace": {
     "dependencies": [
       "jsr:@hono/hono@4",
-      "jsr:@std/assert@1",
+      "jsr:@nelreina/redis-client@~0.1.9",
       "npm:@drizzle-team/brocli@~0.10.1",
-      "npm:@nelreina/redis-stream-consumer@^2.1.6",
       "npm:drizzle-kit@~0.26.2",
       "npm:drizzle-orm@~0.35.2",
-      "npm:postgres@^3.4.4",
-      "npm:redis@^4.7.0"
+      "npm:postgres@^3.4.4"
     ]
   }
 }

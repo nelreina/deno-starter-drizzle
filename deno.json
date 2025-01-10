@@ -7,16 +7,13 @@
     "studio": "deno task drizzle-kit studio",
     "update": "deno run --allow-read=./ --allow-net --allow-write=./ https://deno.land/x/deno_outdated@0.2.5/cli.ts && deno install",
     "drizzle-kit": "deno run --env -A --node-modules-dir npm:drizzle-kit"
-
   },
   "imports": {
-    "@nelreina/redis-stream-consumer": "npm:@nelreina/redis-stream-consumer@^2.1.6",
-    "@std/assert": "jsr:@std/assert@1",
+    "@nelreina/redis-client": "jsr:@nelreina/redis-client@^0.1.9",
     "@drizzle-team/brocli": "npm:@drizzle-team/brocli@^0.10.1",
     "drizzle-kit": "npm:drizzle-kit@^0.26.2",
     "drizzle-orm": "npm:drizzle-orm@^0.35.2",
     "hono": "jsr:@hono/hono@^4",
-    "postgres": "npm:postgres@^3.4.4",
-    "redis": "npm:redis@^4.7.0"
+    "postgres": "npm:postgres@^3.4.4"
   }
 }
