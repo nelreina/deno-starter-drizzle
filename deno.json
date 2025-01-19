@@ -9,7 +9,7 @@
     "drizzle-kit": "deno run --env -A --node-modules-dir npm:drizzle-kit"
   },
   "imports": {
-    "@nelreina/redis-client": "jsr:@nelreina/redis-client@^0.4.0",
+    "@nelreina/redis-client": "jsr:@nelreina/redis-client@^0.4.1",
     "@drizzle-team/brocli": "npm:@drizzle-team/brocli@^0.10.1",
     "drizzle-kit": "npm:drizzle-kit@^0.26.2",
     "drizzle-orm": "npm:drizzle-orm@^0.35.2",
